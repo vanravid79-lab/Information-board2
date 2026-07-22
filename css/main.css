@@ -1115,6 +1115,17 @@ body {
   margin-top: -4.7rem;
 }
 
+.myGate2 {
+  margin-top: 18rem;
+  margin-left: -24rem;
+}
+
+.gate2Child {
+  background-color: rgb(113, 111, 111);
+  width: 4.7rem;
+  height: 2rem;
+}
+
 /* iPad Pro 12.9" / Air landscape, and general tablet landscape */
 @media only screen and (max-width: 1180px) {
   :root {
@@ -1123,12 +1134,11 @@ body {
 
   body {
     padding: 1rem 0;
-
+    padding-left: 20px;
     overflow-y: auto;
   }
 
   .allElement {
-    background-color: rgb(223, 220, 220);
     column-gap: 5rem;
     grid-template-columns: repeat(6, 200px);
   }
@@ -1319,7 +1329,7 @@ body {
     width: 130px;
     height: 45px;
     margin-top: -8rem;
-    margin-left: 6rem;
+    margin-left: 4rem;
     padding: 2px;
   }
 
@@ -1376,6 +1386,22 @@ body {
 
   .rowElement44 {
     margin-top: 2.5rem;
+  }
+
+  .gateElement .gate1 {
+    width: 14%;
+    height: 1.5rem;
+    margin-left: -17rem;
+    margin-top: -6.5rem;
+  }
+
+  .myGate2 .gate2Child {
+    width: 14%;
+    height: 2.1rem;
+  }
+
+  .gate2Child {
+    margin-top: -1rem;
   }
 
   /* .logo-grid {
