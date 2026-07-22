@@ -1,0 +1,225 @@
+/* ==========================================================
+   1. DESIGN TOKENS & SYSTEM VARIABLES
+   ========================================================== */
+:root {
+  --grid-width: 320px; /* Desktop default width */
+  --grid-height: 510px; /* Scroll container height */
+  --min-card-width: 110px; /* Flexible grid column base */
+
+  --color-border: #e0e0e0;
+  --color-card-bg: #ffffff;
+  --color-active-bg: #f0f7ff;
+  --color-active-border: #007bff;
+  --color-pin: #ff3b30;
+  --color-shadow: rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================
+   2. LOGO GRID & SCROLL CONTAINER
+   ========================================================== */
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min-card-width), 1fr));
+  gap: 16px;
+  padding: 16px 12px;
+
+  width: var(--grid-width);
+  max-width: 100%;
+  height: var(--grid-height);
+  max-height: var(--grid-height);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  /* Edge-fade mask effect */
+  -webkit-mask-clip: padding-box;
+  mask-clip: padding-box;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 1) 94%,
+    rgba(0, 0, 0, 0) 0%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 6%,
+    rgba(0, 0, 0, 1) 94%,
+    rgba(0, 0, 0, 0) 0%
+  );
+}
+
+/* Custom Thin Scrollbar */
+.logo-grid::-webkit-scrollbar {
+  width: 5px;
+}
+.logo-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+.logo-grid::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.logo-grid::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================
+   3. COMPANY CARD & LOGO STYLING
+   ========================================================== */
+.company-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px 8px;
+  background-color: var(--color-card-bg);
+  box-shadow: 0 4px 6px var(--color-shadow);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.companyLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.companyLogo img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.company-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.company-card.active-selected-card {
+  background-color: var(--color-active-bg);
+  outline: 2px solid var(--color-active-border);
+  border-color: transparent;
+  transform: scale(1.02);
+}
+
+/* ==========================================================
+   4. MAP BOOTH CELL & FLOATING LOCATION PIN
+   ========================================================== */
+.booth-cell {
+  position: relative;
+  overflow: visible;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.booth-cell.highlighted {
+  transform: scale(1.05);
+  color: #ffffff;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.booth-pin {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  translate: -50% 0;
+  font-size: 24px;
+  color: var(--color-pin);
+  pointer-events: none;
+  z-index: 99;
+  animation: floatPin 1.5s ease-in-out infinite;
+}
+
+@keyframes floatPin {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ==========================================================
+   5. IPAD & TABLET RESPONSIVE BREAKPOINTS
+   ========================================================== */
+
+/* --- IPAD MINI SPECIFIC BREAKPOINT (744px - 768px Width) --- */
+@media only screen and (min-width: 744px) and (max-width: 768px) {
+  :root {
+    --grid-width: 100%; /* Spans full available container width */
+    --grid-height: 420px; /* Scaled height for smaller screen space */
+    --min-card-width: 95px; /* Allows 3 clean columns on iPad Mini portrait */
+  }
+
+  .logo-grid {
+    padding: 10px 6px;
+    gap: 10px;
+  }
+
+  .company-card {
+    padding: 6px 4px;
+  }
+
+  .companyLogo img {
+    max-height: 38px; /* Fits slightly smaller logos comfortably */
+  }
+
+  .company-name {
+    font-size: 12px;
+  }
+}
+
+/* --- IPAD AIR & IPAD PRO PORTRAIT (769px - 834px) --- */
+@media only screen and (min-width: 769px) and (max-width: 834px) and (orientation: portrait) {
+  :root {
+    --grid-width: 100%;
+    --grid-height: 450px;
+    --min-card-width: 120px;
+  }
+
+  .logo-grid {
+    padding: 12px 8px;
+    gap: 12px;
+  }
+
+  .company-card {
+    padding: 8px 6px;
+  }
+
+  .company-name {
+    font-size: 13px;
+  }
+}
+
+/* --- IPAD MINI, AIR, PRO LANDSCAPE (835px - 1194px) --- */
+@media only screen and (min-width: 835px) and (max-width: 1194px) and (orientation: landscape) {
+  :root {
+    --grid-width: 260px; /* Compact sidebar width for iPad Mini landscape */
+    --grid-height: 440px;
+    --min-card-width: 100px;
+  }
+
+  .logo-grid {
+    padding: 12px 8px;
+    gap: 12px;
+  }
+}

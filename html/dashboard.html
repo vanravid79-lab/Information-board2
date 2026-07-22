@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo Admin — Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-text">
+                    <strong> Admin</strong>
+                    <span>Booth Management</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 8px; padding: 16px 0;">
+
+                <!-- 1. Dashboard (Active) -->
+                <a href="dashboard.html" class="nav-item active" data-page="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+
+
+                <!-- 3. Dynamic Exhibitor Logs -->
+                <a href="admin.html" class="nav-item" data-page="exhibitors">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Exhibitors List</span>
+                </a>
+
+
+
+
+                <!-- Separator Divider Line -->
+                <div style="height: 1px; background-color: rgba(255, 255, 255, 0.1); margin: 8px 16px;"></div>
+
+                <!-- 5. Global System Settings -->
+                <!-- <a href="#" class="nav-item" data-page="settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a> -->
+
+            </nav>
+
+            <div class="sidebar-footer">Floor Plan v1</div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-col">
+
+            <header class="topbar">
+                <div class="topbar-title">
+                    <h1>Dashboard</h1>
+                    <p>Expo floor overview, at a glance</p>
+                </div>
+            </header>
+
+            <!-- Stats row -->
+            <section class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-label">Total Brands</span>
+                    <span class="stat-value" id="dashStatBrands">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Booths Booked</span>
+                    <span class="stat-value" id="dashStatBooths">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Pending Review</span>
+                    <span class="stat-value" id="dashStatPending">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Last Updated</span>
+                    <span class="stat-value stat-value--small" id="dashStatUpdated">—</span>
+                </div>
+            </section>
+
+            <!-- Charts row -->
+            <section class="dashboard-grid">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>New Bookings — Last 7 Days</h2>
+                        <span>Brands added</span>
+                    </div>
+                    <div id="trendChart"></div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>Booking Status</h2>
+                        <span>By brand</span>
+                    </div>
+                    <div id="donutChart"></div>
+                </div>
+            </section>
+
+            <!-- Activity + quick actions row -->
+            <section class="dashboard-grid">
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>Recent Activity</h2>
+                        <span>Latest 5</span>
+                    </div>
+                    <div id="activityList" class="activity-list"></div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-card-header">
+                        <h2>Quick Actions</h2>
+                        <span></span>
+                    </div>
+                    <div class="quick-actions">
+                        <a href="/html/admin.html" class="quick-action-btn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                            </svg>
+                            <strong>Exhibitors list</strong>
+                            <span>Edit or remove bookings</span>
+                        </a>
+                        <a href="#" class="quick-action-btn" data-page="floor-map">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                            </svg>
+                            <strong>Floor map</strong>
+                            <span>Coming soon</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+
+</html>

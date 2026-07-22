@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device & Room Layout Dashboard</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/logo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+
+    <section class="allElement">
+        <div class="element1">
+
+            <div class="device-container">
+                <div class="device-body">
+                    <div class="top-line"></div>
+                    <!-- speaker-grill -->
+                    <div class="speaker-grill">
+                    </div>
+
+                </div>
+
+                <div class="device-base">
+                    <div class="square-button">
+                        <div class="inner-square"></div>
+                    </div>
+                </div>
+
+                <!-- Room Layout -->
+                <div class="room-layout">
+                    <div id="left-side" class="seating-block"></div>
+                    <div class="center-aisle"></div>
+                    <div id="right-side" class="seating-block"></div>
+                </div>
+
+                <section class="size-label">
+                    9m x 6m
+                </section>
+
+                <section class="sixBooths">
+                    <div class="sponsor-logo-box sponsor-blue" style="background-color: rgb(71, 90, 237);">
+                        <div class="vertical-bar"></div>
+                        <div class="vertical-bar"></div>
+                    </div>
+                    <div class="sponsor-logo-box sponsor-blue" style="background-color: rgb(71, 90, 237);">
+                        <div class="vertical-bar"></div>
+                        <div class="vertical-bar"></div>
+                    </div>
+                    <div class="sponsor-logo-box sponsor-blue" style="background-color: rgb(71, 90, 237);">
+                        <div class="vertical-bar"></div>
+                        <div class="vertical-bar"></div>
+                    </div>
+                    <div class="sponsor-logo-box sponsor-blue" style="background-color: rgb(71, 90, 237);">
+                        <div class="vertical-bar"></div>
+                        <div class="vertical-bar"></div>
+                    </div>
+                    <div class="sponsor-logo-box sponsor-blue" style="background-color: rgb(71, 90, 237);">
+                        <div class="vertical-bar"></div>
+                        <div class="vertical-bar"></div>
+                    </div>
+                </section>
+
+                <div class="clothesRoom">
+                    <span class="room-text"></span>
+                </div>
+
+                <div class="leftCarExpo">
+
+                    <div class="allCarExpo1">
+                        <div class="carExpo1"></div>
+                        <div class="carExpo2" style="margin-left: 8rem;" id="lExpo1"></div>
+                    </div>
+
+                    <div class="rExpo2">
+                        <div class="carExpo1"></div>
+                        <div class="carExpo2" style="margin-left: 8rem;"></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+
+        <div>
+            <div class="element2">
+
+                <!-- row1 -->
+                <div id="row1Container" class="number-row">
+                    <!-- JS will populate row1 items here -->
+                </div>
+
+                <div class="column3">
+                    <!-- Container for Row 2 -->
+                    <!-- row2 -->
+                    <div id="row2Container" class="number-column">
+                        <!-- JS will populate row2 items here -->
+                    </div>
+
+                    <div class="totalRows">
+                        <div class="rowElement1" id="booth-floor-plan">
+                            <div class="parentRow1">
+                                <!-- row3 -->
+                                <div id="row3Container" class="row1">
+
+                                </div>
+
+                                <!-- row4 -->
+                                <div id="row4Container" class="row2">
+
+                                </div>
+                            </div>
+                            <!-- row5 -->
+                            <div id="row5Container" class="subParent1">
+
+                            </div>
+                        </div>
+
+                        <div class="rowStyle">
+                            <div class="rowElement1" id="booth-floor-plan">
+                                <div class="parentRow1">
+
+                                    <!-- row6 -->
+                                    <div id="row6Container" class="row1">
+
+                                    </div>
+
+                                    <!-- row7 -->
+                                    <div id="row7Container" class="row2">
+
+                                    </div>
+                                </div>
+
+                                <!-- row8 -->
+                                <div id="row8Container" class="subParent1">
+
+                                </div>
+                            </div>
+
+                            <div class="sponsor-logo-box">
+                                <div class="vertical-bar"></div>
+                                <div class="vertical-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="layout-container">
+
+                            <div class="house-box box-moc">
+                                <div class="decor-oval"></div>
+                                <div class="decor-diamond"></div>
+                                <div class="decor-dots top-left"></div>
+                                <div class="decor-dots top-right"></div>
+                                <div class="decor-dots bottom-left"></div>
+                                <div class="decor-dots bottom-right"></div>
+
+                                <div class="content">
+                                    <h2>Common House</h2>
+                                    <p>MoC 12m x 6m</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="element3">
+                <div>
+                    <!-- row9 -->
+                    <div id="row9Container" class="number-row2">
+
+                    </div>
+                </div>
+
+                <div class="allRow">
+                    <div class="allRow1">
+                        <div class="r3">
+                            <div class="rowElement1">
+
+                                <!-- row10-->
+                                <div id="row10Container" class="subParent1">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="r4">
+                            <div class="rowElement1">
+                                <!-- row11-->
+                                <div id="row11Container" class="subParent1">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="allRow2">
+                        <div class="r5">
+                            <div class="rowElement1">
+                                <!-- row12-->
+                                <div id="row12Container" class="subParent1">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="r6">
+                            <div class="rowElement1">
+
+                                <!-- row13-->
+                                <div id="row13Container" class="subParent1">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <section class="sponsor">
+                            <div>
+                                <div class="sponsor-logo-box">
+                                    <div class="vertical-bar"></div>
+                                    <div class="vertical-bar"></div>
+                                </div>
+                            </div>
+
+                            <div class="allSor1">
+                                <div class="sponsor-logo-box">
+                                    <div class="vertical-bar"></div>
+                                    <div class="vertical-bar"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="sponsor2">
+                            <div>
+                                <div class="sponsor-logo-box">
+                                    <div class="vertical-bar"></div>
+                                    <div class="vertical-bar"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="sponsor-logo-box">
+                                    <div class="vertical-bar"></div>
+                                    <div class="vertical-bar"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div>
+            <div class="element4">
+                <div class="numberRowStyle2">
+
+                    <!-- row14 -->
+                    <div id="row14Container" class="number-row2">
+
+
+                    </div>
+
+
+                </div>
+
+                <section class="AllReRows">
+                    <div class="totalRows">
+                        <div class="rowElement1">
+                            <div style="margin-left: -0.4rem;" class="cRow">
+                                <div class="parentRow1">
+
+                                    <div id="row15Container" class="row1">
+                                        <!-- <div>C10</div>
+                                        <div>C12</div>
+                                        <div>C14</div>
+                                        <div>C16</div> -->
+                                    </div>
+
+                                    <div id="row16Container" class="row2">
+                                        <!-- <div>C18</div>
+                                        <div>C20</div>
+                                        <div>C22</div>
+                                        <div>C24</div> -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div id="row17Container" class="subParent1" style="margin-left: 2rem;">
+                                <!-- <div>D10</div>
+                                <div>D11</div>
+                                <div>D12</div>
+                                <div>D13</div> -->
+                            </div>
+                        </div>
+
+                        <div class="rowStyle">
+                            <div class="rowElement1">
+                                <div style="margin-left: -0.4rem;">
+                                    <div class="parentRow1">
+
+                                        <div id="row18Container" class="row1">
+                                            <!-- <div>C25</div>
+                                            <div>C26</div>
+                                            <div>C27</div>
+                                            <div>C28</div> -->
+                                        </div>
+
+                                        <div id="row19Container" class="row2">
+                                            <!-- <div>C29</div>
+                                            <div>C30</div>
+                                            <div>C31</div>
+                                            <div>C31</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="row20Container" class="subParent1">
+                                    <!-- <div>D40</div>
+                                    <div>D41</div>
+                                    <div>D42</div>
+                                    <div>D43</div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tenRowElement">
+                        <div class="rowElement1">
+                            <div style="margin-left: -0.4rem;">
+                                <div class="parentRow1">
+
+                                    <div id="row21Container" class="row1">
+
+                                    </div>
+
+                                    <div id="row22Container" class="row2">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="threeRElement">
+                        <div class="tenRowElement">
+                            <div style="margin-left: -0.4rem;">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+
+                                        <div id="row23Container" class="row1">
+                                            <!-- <div>J00</div>
+                                            <div></div>
+                                            <div>170</div> -->
+                                        </div>
+
+                                        <div id="row24Container" class="row2">
+                                            <!-- <div>167</div>
+                                            <div>166</div>
+                                            <div>165</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div>
+            <div class="element5">
+                <div class="numberRowStyle3">
+
+                    <div id="row25Container" class="number-row2">
+                        <!-- <div>E1</div>
+                        <div>E2</div>
+                        <div>E3</div>
+                        <div>E4</div>
+                        <div>E4</div> -->
+                    </div>
+
+                </div>
+
+                <section class="parentTenRows">
+                    <div class="tenRowsElement">
+                        <div class="rowElement1">
+                            <div style="margin-left: -0.8rem;">
+                                <div class="parentRow1">
+
+                                    <div id="row26Container" class="row1">
+                                        <!-- <div>E10</div>
+                                        <div>E11</div>
+                                        <div>E12</div>
+                                        <div>E13</div>
+                                        <div>E14</div> -->
+                                    </div>
+
+                                    <div id="row27Container" class="row2">
+                                        <!-- <div>E15</div>
+                                        <div>E16</div>
+                                        <div>E17</div>
+                                        <div>E18</div>
+                                        <div>E19</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tenRowsElement2">
+                        <div class="rowElement1">
+                            <div style="margin-left: -0.8rem;">
+                                <div class="parentRow1">
+
+                                    <div id="row28Container" class="row1">
+                                        <!-- <div>F30</div>
+                                        <div>F31</div>
+                                        <div>F32</div>
+                                        <div>F33</div>
+                                        <div>F34</div> -->
+                                    </div>
+                                    <div id="row29Container" class="row2">
+                                        <!-- <div>F35</div>
+                                        <div>F36</div>
+                                        <div>F37</div>
+                                        <div>F38</div>
+                                        <div>F39</div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="sixRowELement">
+                        <div class="tenRowsElement3">
+                            <div style="margin-left: -1rem;">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+
+                                        <div id="row30Container" class="row1">
+                                            <!-- <div>Y1</div>
+                                            <div>Y10</div>
+                                            <div>Y11</div> -->
+                                        </div>
+
+                                        <div id="row31Container" class="row2">
+                                            <!-- <div>Y12</div>
+                                            <div>Y13</div>
+                                            <div>Y14</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tenRowsElement4">
+
+                            <div style="margin-left: -0.9rem;">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+
+                                        <div id="row32Container" class="row1">
+                                            <!-- <div>Y2</div>
+                                            <div>Y20</div>
+                                            <div>Y21</div> -->
+                                        </div>
+
+                                        <div id="row33Container" class="row2">
+                                            <!-- <div>Y22</div>
+                                            <div>Y23</div>
+                                            <div>Y24</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sixRowELement2">
+                        <div class="tenRowsElement3">
+                            <div style="margin-left: -1rem;">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+
+                                        <div id="row34Container" class="row1">
+                                            <!-- <div>J44</div>
+                                            <div>171</div>
+                                            <div>170</div> -->
+                                        </div>
+
+                                        <div id="row35Container" class="row2">
+                                            <!-- <div>168</div>
+                                            <div>167</div>
+                                            <div>166</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tenRowsElement4">
+                            <div style="margin-left: -0.9rem;">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+                                        <div id="row36Container" class="row1">
+                                            <!-- <div>Z1</div>
+                                            <div>171</div>
+                                            <div>170</div>
+                                            <div>170</div> -->
+                                        </div>
+
+                                        <div id="row37Container" class="row2">
+                                            <!-- <div>168</div>
+                                            <div>167</div>
+                                            <div>166</div>
+                                            <div>170</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="threeBoxElement">
+                    <div class="tenRowsElement3">
+                        <div style="margin-left:-1rem;">
+                            <div class="rowElement1">
+                                <div class="parentRow1">
+
+                                    <div id="row38Container" class="row1">
+                                        <!-- <div>L1</div>
+                                        <div>L3</div>
+                                        <div>L5</div> -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tenRowsElement3">
+                        <div style="margin-left: -1rem;">
+                            <div class="rowElement1">
+                                <div class="parentRow1">
+
+                                    <div class="row1" id="row39Container">
+                                        <!-- <div>L2</div>
+                                        <div>L6</div>
+                                        <div>L8</div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- gate2 -->
+            <div style="margin-top: 18rem; margin-left: -24rem;">
+                <div style="background-color:rgb(113, 111, 111) ; width: 4.7rem;
+  height: 2rem;"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="element6">
+                <div class="numberRowStyle4">
+
+                    <div id="row40Container" class="number-row3">
+                        <!-- <div>127</div>
+                        <div>126</div>
+                        <div>125</div>
+                        <div>124</div>
+                        <div>123</div>
+                        <div>122</div> -->
+                    </div>
+
+                </div>
+
+                <div class="myBootCamp">
+                    <div class="bootCamp">
+                        <div class="threeSwRos">
+                            <div class="tenRowsElement4">
+                                <div class="rowElement1" style=" margin-left: -1.2rem;">
+                                    <div class="parentRow1 bootcamp-custom-matrix">
+
+                                        <div class="row1">
+                                            <div id="row52Container">
+                                                <!-- 130 -->
+                                            </div>
+                                            <div id="row53Container" class="blue-highlight"
+                                                style="background-color: rgb(1, 1, 167); color: white;">
+                                            </div>
+                                        </div>
+                                        <div class="row2">
+                                            <div id="row54Container"></div>
+                                            <div id="row55Container" class="blue-highlight"
+                                                style="background-color: rgb(1, 1, 167); color: white;"></div>
+                                        </div>
+
+                                        <div class="row2">
+                                            <div id="row56Container"></div>
+                                            <div id="row57Container" class="blue-highlight-border"
+                                                style="background-color: rgb(1, 1, 167); color: white;"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="room">
+                        <div class="room-dimensions">20m x 12m</div>
+
+                        <script>
+                            // Using a quick loop to output the 15 identical table structures cleanly
+                            const chairsHTML = Array.from({ length: 10 }, (_, i) => `<div class="chair" style="--angle: ${i * 36}deg;"></div>`).join('');
+                            const tableHTML = `<div class="table-group">${chairsHTML}</div>`;
+                            document.write(tableHTML.repeat(15));
+                        </script>
+                        <div style="position: absolute; bottom:0; right: -1.2rem;">
+                            <div class="rowElement1" style=" margin-top: -4.7rem; ">
+                                <div class="parentRow1 bootcamp-custom-matrix">
+
+                                    <div id="row44Container" class="row1" style="background-color: blue;">
+
+
+                                    </div>
+
+                                    <div id="row45Container" class="row2" style="background-color: blue;">
+
+
+                                    </div>
+
+                                    <div id="row46Container" class="row2" style="background-color: blue;">
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+
+                <div class="miniStage">
+                    <div class="plan-container">
+                        <div class="dimensions">24m x 12m</div>
+
+                        <div class="right-section">
+                            <div class="dots-wrapper">
+                                <div class="dot-grid">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="dot-grid">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="feature-panel">
+                                <div class="inner-black-dot d1"></div>
+                                <div class="inner-black-dot d2"></div>
+                                <div class="inner-black-dot d3"></div>
+                                <div class="inner-black-dot d4"></div>
+                                <div class="inner-black-dot d5"></div>
+                                <div class="inner-black-dot d6"></div>
+                                <div class="inner-black-dot d7"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="clothesRoom2">
+                        <div class="clothes"></div>
+                    </div>
+                </div>
+
+                <div class="rowElement6">
+                    <div style="margin-left: -0.7rem; margin-top: -0.1rem;">
+                        <div class="rowElement1">
+                            <div class="parentRow1">
+
+                                <div id="row47Container" class="row1">
+                                    <!-- <div>G5</div>
+                                    <div>G6</div>
+                                    <div>G7</div>
+                                    <div>G8</div> -->
+                                </div>
+
+                                <div id="row48Container" class="row2">
+                                    <!-- <div>G1</div>
+                                    <div>G2</div>
+                                    <div>G3</div>
+                                    <div>G4</div> -->
+                                </div>
+
+                            </div>
+
+                            <div id="row49Container" class="subParent1" style="margin-left: 2rem;">
+                                <!-- <div>164</div>
+                                <div>162</div>
+                                <div>163</div>
+                                <div>161</div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="threeBoxElement2">
+                    <div class="threeBoxElement">
+                        <div class="tenRowsElement3">
+                            <div style="margin-left: -0.9rem;" class="r50">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+                                        <div>
+                                            <div id="row50Container" class="row1">
+                                                <!-- <div>172</div>
+                                            <div>171</div>
+                                            <div>170</div> -->
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tenRowsElement3">
+                            <div style="margin-left: -0.8rem;" class="r51">
+                                <div class="rowElement1">
+                                    <div class="parentRow1">
+
+                                        <div id="row51Container" class="row1">
+                                            <!-- <div>172</div>
+                                            <div>171</div> -->
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="RightCarExpo">
+                    <div class="carExpo3"></div>
+                    <div class="carExpo4"></div>
+                </div> -->
+                <div style="margin-top: 13rem;">
+                    <div class="clothesRoom6" style="margin-left: -4rem;">
+                        <span class="room-text6"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="companyLogo">
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div style="display: flex; justify-content: center; margin-top: -13rem; margin-left: -5rem;">
+        <div class="reg-fp-container">
+            <div class="reg-fp-station-wrapper">
+
+                <div class="reg-fp-desk-station">
+                    <div class="reg-fp-desk"></div>
+                    <div class="reg-fp-chair-row">
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                    </div>
+                </div>
+
+                <div class="reg-fp-desk-station">
+                    <div class="reg-fp-desk"></div>
+                    <div class="reg-fp-chair-row">
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                        <div class="reg-fp-chair"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="reg-fp-label-footer">
+                <div class="reg-fp-main-title">Registration</div>
+                <div class="reg-fp-dimensions">15mX6m</div>
+            </div>
+        </div>
+
+
+    </div>
+    <section>
+        <div>
+            <div class="gateElement">
+                <div class="gate1"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- company logo -->
+    <div style="margin-left: 107rem; margin-top: -40rem; ">
+        <div id="boothContainer" class="logo-grid"></div>
+    </div>
+
+
+
+
+    </div>
+
+    <script src="/js/app.js"></script>
+    <script type="module" src="../js/displayComLogo.js"></script>
+    <script type="module" src="../js/boothsNumber.js"></script>
+    <script type="module">
+        import { renderBooths } from "../js/displayBoothsNumber.js";
+
+        // Load booths automatically when the webpage opens
+        document.addEventListener("DOMContentLoaded", () => {
+            renderBooths();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo Admin — Exhibitor Directory</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+    <div class="app-shell">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-text">
+                    <strong> Admin</strong>
+                    <span>Booth Management</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav" style="display: flex; flex-direction: column; gap: 8px; padding: 16px 0;">
+
+                <!-- 1. Dashboard -->
+                <a href="dashboard.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+
+
+
+                <!-- 3. Dynamic Exhibitor Logs (Active) -->
+                <a href="admin.html" class="nav-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>Exhibitors List</span>
+                </a>
+
+
+
+                <!-- Separator Divider Line -->
+                <div style="height: 1px; background-color: rgba(255, 255, 255, 0.1); margin: 8px 16px;"></div>
+
+                <!-- 5. Global System Settings -->
+                <!-- <a href="#" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="nav-icon" style="width: 18px; height: 18px;">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
+                    </svg>
+                    <span>Settings</span>
+                </a> -->
+
+            </nav>
+
+            <div class="sidebar-footer">Floor Plan v1</div>
+        </aside>
+
+        <!-- Main -->
+        <div class="main-col">
+
+            <header class="topbar">
+                <div class="topbar-title">
+                    <h1>Exhibitor Directory</h1>
+                    <p>Manage brand bookings and booth assignments</p>
+                </div>
+
+                <div class="topbar-actions">
+                    <div class="search-box">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="searchInput" placeholder="Search brand or booth #">
+                    </div>
+                    <button type="button" id="btnToggleForm" class="btn-primary-action">
+                        <span class="btn-icon">+</span> Add Brand
+                    </button>
+                </div>
+            </header>
+
+            <section class="stats-row">
+                <div class="stat-card">
+                    <span class="stat-label">Total Brands</span>
+                    <span class="stat-value" id="statBrands">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Booths Booked</span>
+                    <span class="stat-value" id="statBooths">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Last Updated</span>
+                    <span class="stat-value stat-value--small" id="statUpdated">—</span>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <div class="table-scroll">
+                    <div class="table-header-row">
+                        <span class="col-logo">Logo</span>
+                        <span class="col-name">Brand</span>
+                        <span class="col-booths">Booths</span>
+                        <span class="col-status">Status</span>
+                        <span class="col-actions" style="text-align:right;">Actions</span>
+                    </div>
+                    <div id="brandListContainer" class="table-body">
+                        <p class="loading-text">Loading brands…</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Add / Edit drawer -->
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <section id="allMyContainer" style="display: none;">
+
+        <form id="adminForm">
+
+            <div class="drawer-header">
+                <h2 id="formTitle">Add New Brand</h2>
+                <button type="button" id="btnCloseDrawer" class="btn-icon-only" aria-label="Close">×</button>
+            </div>
+
+            <input type="hidden" id="editingDocId" value="">
+
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label for="companyName" style="display: block; margin-bottom: 6px; font-weight: 600;">Brand
+                    Name</label>
+                <input type="text" id="companyName" name="companyName" placeholder="e.g., Acme Robotics" required
+                    style="width: 100%; padding: 8px; box-sizing: border-box;">
+
+                <!-- message error or complete -->
+                <div id="brandNameFeedback" style="margin-top: 4px; font-size: 0.85em;"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="brandImage">Brand Logo</label>
+                <input type="file" id="brandImage" name="brandImage" accept="image/*">
+                <small>PNG or JPG, up to 2MB</small>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label for="brandImage" style="display: block; margin-bottom: 6px; font-weight: 600;">Brand Logo</label>
+                <small style="display: block; margin-bottom: 8px; color: #666;">Upload a high-quality logo (Max size:
+                    800KB).</small>
+
+                <!-- File Input -->
+                <input type="file" id="brandImage" name="brandImage" accept="image/*"
+                    style="display: block; width: 100%; margin-bottom: 10px;" />
+
+                <!-- Image Preview Container -->
+                <div id="imagePreviewContainer" style="margin-top: 8px;">
+                    <img id="imagePreview" src="" alt="Brand Logo Preview"
+                        style="display: none; max-width: 140px; max-height: 100px; border-radius: 8px; border: 1px solid #e0e0e0; padding: 4px; background: #ffffff; object-fit: contain; box-shadow: 0 2px 4px rgba(0,0,0,0.05);" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label style="display: block; margin-bottom: 6px; font-weight: 600;">Select Booth Numbers</label>
+                <small style="display: block; margin-bottom: 8px; color: #666;">
+                    Click available booths to select/deselect them for this brand.
+                </small>
+
+                <!-- Hidden input to store selected booth values for submission -->
+                <input type="hidden" id="boothNumbers" name="boothNumbers" required>
+
+                <!-- Interactive Booth Selector Board -->
+                <div class="booth-status-board"
+                    style="margin-top: 10px; border: 1px solid #e0e0e0; padding: 12px; border-radius: 6px; background: #fafafa;">
+                    <div style="display: flex; gap: 15px; margin-bottom: 10px; font-size: 0.8em; font-weight: 600;">
+                        <span style="color: #2e7d32;">● Available</span>
+                        <span style="color: #0288d1;">● Selected</span>
+                        <span style="color: #c62828;">● Booked / Confirmed</span>
+                    </div>
+
+                    <!-- Interactive Grid populated by JS -->
+                    <div id="allBoothsStatusGrid"
+                        style="display: flex; flex-wrap: wrap; gap: 8px; max-height: 250px; overflow-y: auto;"></div>
+                </div>
+
+                <!-- Live Selection Summary -->
+                <div id="boothValidationFeedback"
+                    style="margin-top: 8px; font-size: 0.85em; line-height: 1.5; font-family: sans-serif;"></div>
+            </div>
+
+            <div class="drawer-footer">
+                <button type="submit" class="btn-submit">Submit Info</button>
+                <button type="button" id="btnCancelEdit" class="btn-cancel" style="display:none;">Cancel Edit</button>
+            </div>
+        </form>
+    </section>
+
+    <script type="module" src="../js/admin.js"></script>
+</body>
+
+</html>

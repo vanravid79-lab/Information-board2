@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Booth Upload</title>
+</head>
+
+<body>
+    <main>
+        <section style="display: flex; gap: 10px; padding: 20px;">
+            <button id="btnUpload" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                ADD DATA
+            </button>
+
+            <button id="btnBooths" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                Upload Booths Number
+            </button>
+        </section>
+    </main>
+
+    <script type="module">
+        import { uploadData } from "../js/boothData.js";
+        import { seedBoothsCollection } from "../js/numberBooths.js";
+
+        // Helper function to manage button loading states cleanly
+        async function handleAsyncAction(buttonElement, loadingText, actionFn) {
+            const originalText = buttonElement.innerText;
+            buttonElement.disabled = true;
+            buttonElement.innerText = loadingText;
+
+            try {
+                await actionFn();
+                alert("Operation finished successfully. Check console for details.");
+            } catch (err) {
+                console.error("Action failed:", err);
+                alert("Operation failed. See console for details.");
+            } finally {
+                buttonElement.disabled = false;
+                buttonElement.innerText = originalText;
+            }
+        }
+
+        // 1. Upload standard data
+        document.getElementById("btnUpload").addEventListener("click", (e) => {
+            handleAsyncAction(e.target, "Uploading Data...", uploadData);
+        });
+
+        // 2. Seed 'booths' collection
+        document.getElementById("btnBooths").addEventListener("click", (e) => {
+            handleAsyncAction(e.target, "Seeding Booths...", seedBoothsCollection);
+        });
+    </script>
+</body>
+
+</html>

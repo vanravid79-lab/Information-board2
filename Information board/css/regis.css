@@ -1,0 +1,77 @@
+/* Main Outer Layout Container (Your requested exact dimensions) */
+.floor-plan {
+  width: 220px;
+  height: 90px;
+  background-color: #0b9e8a; /* Teal background color */
+  border: 1px solid #ff4d4d; /* Slight red border outline */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 15px 2px 15px; /* Scaled down padding to prevent overflow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Stations Wrapper */
+.station-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Desk & Chair Groupings (Scaled down to fit width) */
+.desk-station {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75px; /* Shrunk from 220px */
+}
+
+.desk {
+  width: 100%;
+  height: 20px; /* Shrunk from 60px */
+  border: 1px solid #444444;
+  border-radius: 2px;
+}
+
+.chair-row {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 2px;
+}
+
+.chair {
+  width: 10px; /* Shrunk from 25px */
+  height: 14px; /* Shrunk from 40px */
+  border: 1px solid #444444;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
+
+/* Footer & Typography Sections (Scaled down) */
+.label-footer {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #098373; /* Separator line near bottom */
+  padding-top: 1px;
+}
+
+.main-title {
+  color: #ffffff;
+  font-size: 0.85rem; /* Shrunk from 2.8rem */
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+.dimensions {
+  color: #d1ff36; /* Yellow/Lime text color */
+  font-size: 0.45rem; /* Shrunk from 1rem */
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  margin-top: -1px;
+}
