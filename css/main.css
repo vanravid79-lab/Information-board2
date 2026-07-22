@@ -34,6 +34,7 @@ body {
   font-family: var(--font-stack);
   min-height: 100%;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 /* --- LAYOUT GRID SYSTEM --- */
@@ -1097,6 +1098,15 @@ body {
   margin-right: 18rem;
 }
 
+.userCompanyLogo {
+  margin-left: 107rem;
+  margin-top: -40rem;
+}
+
+.myTenRElement {
+  margin-left: -0.8rem;
+}
+
 /* iPad Pro 12.9" / Air landscape, and general tablet landscape */
 @media only screen and (max-width: 1180px) {
   :root {
@@ -1105,8 +1115,8 @@ body {
 
   body {
     padding: 1rem 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
+    overflow-y: auto;
   }
 
   .allElement {
@@ -1214,7 +1224,7 @@ body {
   }
 
   .leftCarExpo .rExpo2 {
-    margin-right: -9.5rem;
+    margin-right: -11.8rem;
     /* Now takes effect properly */
   }
 
@@ -1266,7 +1276,7 @@ body {
     width: 130px;
     height: 45px;
     margin-top: -8rem;
-    margin-left: 3rem;
+    margin-left: 6rem;
     padding: 2px;
   }
 
@@ -1284,6 +1294,48 @@ body {
   .r51 {
     margin-top: 0.7rem;
   }
+
+  .userCompanyLogo {
+    position: absolute;
+    right: 0;
+    margin-top: 3rem;
+    margin-right: 50rem;
+  }
+
+  .sponsor {
+    margin-top: -0.2rem;
+  }
+
+  .mR1 {
+    margin-left: -1.5rem;
+  }
+
+  .mS1 {
+    margin-left: -3rem;
+    margin-top: -0.02rem;
+  }
+
+  .allSor1 {
+    margin-left: -5.4rem;
+  }
+
+  .rFGreen {
+    margin-top: -0.05rem;
+  }
+
+  .myTenRElement {
+    margin-left: 0.5rem;
+  }
+
+  /* .logo-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo-grid > * {
+    width: 100%; /* fixed card width, replaces the old 4-col grid track */
 
   /* .rExpo2 {
     margin-left: -25rem;
