@@ -1107,6 +1107,14 @@ body {
   margin-left: -0.8rem;
 }
 
+.cRow {
+  margin-left: -0.4rem;
+}
+
+.rowElement44 {
+  margin-top: -4.7rem;
+}
+
 /* iPad Pro 12.9" / Air landscape, and general tablet landscape */
 @media only screen and (max-width: 1180px) {
   :root {
@@ -1125,8 +1133,39 @@ body {
     grid-template-columns: repeat(6, 200px);
   }
 
+  .mR2Element {
+    margin-left: -1.5rem;
+  }
+
+  .parentRow1 {
+    margin-left: -1.8rem;
+  }
+
+  .mR5Respone {
+    margin-left: -0.5rem;
+    margin-top: 2px;
+  }
+
+  .mR10Respone {
+    margin-left: -2.5rem;
+    margin-top: 3px;
+  }
+
+  .mR12Respone {
+    margin-left: -0.2rem;
+    /* margin-top: -0.1rem; */
+  }
+
+  /* .mR39 {
+    margin-left: -2rem;
+  } */
+
+  /* .mR34 {
+    margin-right: -5rem; */
+
   .device-container {
     width: 75%;
+    margin-left: -1.5rem;
   }
 
   .device-body {
@@ -1207,6 +1246,10 @@ body {
     height: 100px;
   } */
 
+  .cRow {
+    margin-left: 3rem;
+  }
+
   .clothesRoom {
     width: 60%;
     height: 5rem;
@@ -1224,7 +1267,7 @@ body {
   }
 
   .leftCarExpo .rExpo2 {
-    margin-right: -11.8rem;
+    margin-right: -10.5rem;
     /* Now takes effect properly */
   }
 
@@ -1257,10 +1300,10 @@ body {
     margin-top: -0rem;
   }
 
-  #row12Container {
+  /* #row12Container {
     background-color: red;
     margin-left: 3rem;
-  }
+  } */
 
   #row41Container,
   #row42Container,
@@ -1269,7 +1312,7 @@ body {
   }
 
   .threeSwRos {
-    margin-left: -18.2rem;
+    margin-left: -16.5rem;
   }
 
   .reg-fp-container {
@@ -1324,7 +1367,15 @@ body {
   }
 
   .myTenRElement {
-    margin-left: 0.5rem;
+    margin-left: 2.2rem;
+  }
+
+  .mR17Respone {
+    margin-left: -2rem;
+  }
+
+  .rowElement44 {
+    margin-top: 2.5rem;
   }
 
   /* .logo-grid {
