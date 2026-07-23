@@ -1164,15 +1164,16 @@ body {
     padding: 1rem 0;
     padding-left: 43px;
     overflow-y: auto;
+    background-color: red;
   }
 
   .allElement {
     column-gap: 5rem;
-    grid-template-columns: repeat(6, 190px);
+    grid-template-columns: repeat(6, 140px);
   }
 
   .mR2Element {
-    margin-left: -1.5rem;
+    margin-left: 0.3rem;
   }
 
   .parentRow1 {
@@ -1269,12 +1270,12 @@ body {
   }
 
   .number-row div {
-    width: 32px;
-    height: 23px;
+    width: 25px;
+    height: 20px;
   }
 
   .column3 {
-    column-gap: 14px;
+    column-gap: 35px;
     row-gap: 27px;
   }
 
@@ -1282,8 +1283,8 @@ body {
   .row2 div,
   .row3 div,
   .row4 div {
-    width: 32px;
-    height: 23px;
+    width: 25px;
+    height: 20px;
   }
 
   .subParent1 {
@@ -1305,10 +1306,15 @@ body {
     height: 23px;
   }
 
+  .number-row > div {
+    width: 25px;
+    height: 20px;
+  }
+
   .number-row2 > div,
   .number-row3 > div {
-    width: 32px;
-    height: 23px;
+    width: 25px;
+    height: 20px;
   }
   .sponsor {
     margin-left: -10rem;
@@ -1407,8 +1413,8 @@ body {
   .reg-fp-container {
     width: 130px;
     height: 45px;
-    margin-top: -8rem;
-    margin-left: 4rem;
+    margin-top: 2rem;
+    margin-left: 20rem;
     padding: 2px;
   }
 
@@ -1430,7 +1436,7 @@ body {
   .userCompanyLogo {
     position: absolute;
     right: 0;
-    margin-top: 5rem;
+    margin-top: 17rem;
     margin-right: 54rem;
   }
 
@@ -1496,6 +1502,7 @@ body {
     padding: 1rem 0;
     padding-left: 43px;
     overflow-y: auto;
+    background-color: #0066b2;
   }
 
   .allElement {
