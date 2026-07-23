@@ -1175,7 +1175,7 @@ body {
 
   .allElement {
     column-gap: 5rem;
-    grid-template-columns: repeat(6, 210px);
+    grid-template-columns: repeat(6, 190px);
   }
 
   .mR2Element {
