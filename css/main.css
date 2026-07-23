@@ -1158,15 +1158,17 @@ body {
   margin-left: -0.4rem;
 }
 
+/* Targets iPad Pro 11" (Portrait: 834px | Landscape: 1194px) */
 @media only screen and (max-width: 1194px) {
   body {
     padding: 1rem 0;
+    padding-left: 43px;
     overflow-y: auto;
   }
 
   .allElement {
     column-gap: 5rem;
-    grid-template-columns: repeat(6, 200px);
+    grid-template-columns: repeat(6, 190px);
   }
 
   .mR2Element {
@@ -1269,7 +1271,6 @@ body {
   .number-row div {
     width: 32px;
     height: 23px;
-    padding: 2px;
   }
 
   .column3 {
@@ -1346,7 +1347,7 @@ body {
   .clothesRoom6 {
     width: 50%;
     height: 5rem;
-    margin-left: 2.5rem;
+    margin-left: -3rem;
     margin-top: 2rem;
   }
 
@@ -1404,9 +1405,9 @@ body {
   }
 
   .reg-fp-container {
-    width: 120px;
+    width: 130px;
     height: 45px;
-    margin-top: 8rem;
+    margin-top: -8rem;
     margin-left: 4rem;
     padding: 2px;
   }
@@ -1429,7 +1430,7 @@ body {
   .userCompanyLogo {
     position: absolute;
     right: 0;
-    margin-top: 15rem;
+    margin-top: 5rem;
     margin-right: 54rem;
   }
 
@@ -1482,13 +1483,6 @@ body {
   .gate2Child {
     margin-top: -1rem;
   }
-
-  /* .number-column div {
-    height: 20px;
-  } */
-
-  /* .clothesRoom2 {
-    margin-left:; */
 }
 
 /* iPad Pro 12.9" / Air landscape,
@@ -1685,7 +1679,7 @@ body {
   .clothesRoom6 {
     width: 50%;
     height: 5rem;
-    margin-left: 2.5rem;
+    margin-left: -3rem;
     margin-top: 2rem;
   }
 
