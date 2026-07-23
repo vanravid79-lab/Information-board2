@@ -1158,24 +1158,24 @@ body {
   margin-left: -0.4rem;
 }
 
-@media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
+/* @media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
   body {
     background-color: orange;
   }
-}
+} */
 
 /* Targets iPad Pro 11" (Portrait: 834px | Landscape: 1194px) */
-@media only screen and (max-width: 1194px) {
+@media only screen and (min-width: 1194px) and (max-width: 1194px) and (orientation: landscape) {
   body {
     padding: 1rem 0;
     padding-left: 43px;
     overflow-y: auto;
-    background-color: red;
+    background-color: rgb(152, 237, 172);
   }
 
   .allElement {
     column-gap: 5rem;
-    grid-template-columns: repeat(6, 140px);
+    grid-template-columns: repeat(6, 190px);
   }
 
   .mR2Element {
