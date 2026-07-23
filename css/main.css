@@ -1158,6 +1158,12 @@ body {
   margin-left: -0.4rem;
 }
 
+@media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
+  body {
+    background-color: orange;
+  }
+}
+
 /* Targets iPad Pro 11" (Portrait: 834px | Landscape: 1194px) */
 @media only screen and (max-width: 1194px) {
   body {
