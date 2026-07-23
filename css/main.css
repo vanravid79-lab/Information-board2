@@ -1126,15 +1126,41 @@ body {
   height: 2rem;
 }
 
-/* iPad Pro 12.9" / Air landscape, and general tablet landscape */
-@media only screen and (max-width: 1180px) {
-  :root {
-    --layout-scale: 0.72;
-  }
+.mR28Respone {
+  margin-left: -0.8rem;
+}
 
+.myR18Respone {
+  margin-left: -0.4rem;
+}
+
+.clothesRoom6Element {
+  margin-top: 13rem;
+}
+
+.clothesRoom6 {
+  margin-left: -4rem;
+}
+
+.mR32Respone {
+  margin-left: -0.9rem;
+}
+
+.mR30Respone {
+  margin-left: -1rem;
+}
+
+.mR21Respone {
+  margin-left: -0.4rem;
+}
+
+.mR23Respone {
+  margin-left: -0.4rem;
+}
+
+@media only screen and (max-width: 1194px) {
   body {
     padding: 1rem 0;
-    padding-left: 20px;
     overflow-y: auto;
   }
 
@@ -1165,6 +1191,392 @@ body {
     margin-left: -0.2rem;
     /* margin-top: -0.1rem; */
   }
+
+  .mR28Respone {
+    margin-left: 2.1rem;
+  }
+
+  .mR20Respone {
+    margin-left: -2rem;
+  }
+
+  .myR18Respone {
+    margin-left: 3.1rem;
+  }
+
+  .mR13Respone {
+    margin-left: -0.2rem;
+  }
+
+  .clothes {
+    width: 3vw;
+  }
+
+  .mR8Respone {
+    margin-left: -0.5rem;
+  }
+
+  .r4 {
+    margin-left: -2.5rem;
+  }
+
+  .mR32Respone {
+    margin-left: 2rem;
+  }
+
+  .mR30Respone {
+    margin-left: 2.5rem;
+  }
+
+  .mR21Respone {
+    margin-left: 1.2rem;
+  }
+  .gS6 {
+    margin-left: 2rem;
+  }
+
+  /* .mR6Respone {
+  } */
+
+  /* .mR39 {
+    margin-left: -2rem;
+  } */
+
+  /* .mR34 {
+    margin-right: -5rem; */
+
+  .device-container {
+    width: 75%;
+    margin-left: -1.5rem;
+  }
+
+  .device-body {
+    width: 200px;
+  }
+
+  /* .element2 {
+    background-color: rgb(160, 158, 158);
+  }
+
+  .element3 {
+    background-color: rgb(160, 158, 158);
+  } */
+
+  .device-base {
+    width: 220px;
+  }
+
+  .number-row div {
+    width: 32px;
+    height: 23px;
+    padding: 2px;
+  }
+
+  .column3 {
+    column-gap: 14px;
+    row-gap: 27px;
+  }
+
+  .row1 div,
+  .row2 div,
+  .row3 div,
+  .row4 div {
+    width: 32px;
+    height: 23px;
+  }
+
+  .subParent1 {
+    grid-template-columns: repeat(2, 32px);
+    grid-template-rows: repeat(2, 23px);
+  }
+
+  .rowElement6 {
+    margin-left: -18rem;
+  }
+
+  /* green box */
+  .sponsor-logo-box {
+    width: 45px;
+    height: 35px;
+    margin-top: 3rem;
+  }
+  .vertical-bar {
+    height: 23px;
+  }
+
+  .number-row2 > div,
+  .number-row3 > div {
+    width: 32px;
+    height: 23px;
+  }
+  .sponsor {
+    margin-left: -10rem;
+  }
+  .sponsor2 {
+    margin-left: -12rem;
+  }
+
+  /* .AllReRows {
+    /* margin-left: -9rem; */
+
+  /* .clothesRoom {
+    width: 100px;
+    height: 100px;
+  }
+
+  .clothesRoom6 {
+    width: 100px;
+    height: 100px;
+  } */
+
+  .cRow {
+    margin-left: 3rem;
+  }
+
+  .clothesRoom {
+    width: 60%;
+    height: 5rem;
+    margin-top: 4rem;
+  }
+
+  .clothesRoom6Element {
+    margin-top: 13.7rem;
+  }
+
+  .clothesRoom6 {
+    width: 50%;
+    height: 5rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .leftCarExpo {
+    margin-left: 33rem;
+  }
+
+  .leftCarExpo .rExpo2 {
+    margin-right: -10.5rem;
+    /* Now takes effect properly */
+  }
+
+  .carExpo1,
+  .carExpo2 {
+    width: 11vw;
+    height: 6vh;
+  }
+
+  .plan-container {
+    width: 200px;
+    height: 90px;
+    margin-left: -19.6rem;
+  }
+
+  .room {
+    width: 193px;
+    height: 117px;
+    margin-top: -7.3rem;
+    margin-left: -15.5rem;
+  }
+
+  #row10Container {
+    margin-left: 5rem;
+    margin-top: -0.2rem;
+  }
+
+  #row11Container {
+    margin-left: 5rem;
+    margin-top: -0rem;
+  }
+
+  /* #row12Container {
+    background-color: red;
+    margin-left: 3rem;
+  } */
+
+  #row41Container,
+  #row42Container,
+  #row43Container {
+    margin-left: 3.2rem;
+  }
+
+  .threeSwRos {
+    margin-left: -16.5rem;
+  }
+
+  .reg-fp-container {
+    width: 120px;
+    height: 45px;
+    margin-top: 8rem;
+    margin-left: 4rem;
+    padding: 2px;
+  }
+
+  .reg-fp-station-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .r50,
+  .r51 {
+    margin-top: 0.7rem;
+  }
+
+  .r51 {
+    margin-top: 0.7rem;
+  }
+
+  .userCompanyLogo {
+    position: absolute;
+    right: 0;
+    margin-top: 15rem;
+    margin-right: 54rem;
+  }
+
+  .sponsor {
+    margin-top: -0.2rem;
+  }
+
+  .mR1 {
+    margin-left: -1.5rem;
+  }
+
+  .mS1 {
+    margin-left: -3rem;
+    margin-top: -0.05px;
+  }
+
+  .allSor1 {
+    margin-left: -5rem;
+  }
+
+  .rFGreen {
+    margin-top: -2.8px;
+    margin-left: -0.4rem;
+  }
+
+  .myTenRElement {
+    margin-left: 2.2rem;
+  }
+
+  .mR17Respone {
+    margin-left: -2rem;
+  }
+
+  .rowElement44 {
+    margin-top: 2.5rem;
+  }
+
+  .gateElement .gate1 {
+    width: 14%;
+    height: 1.5rem;
+    margin-left: -17rem;
+    margin-top: -6.5rem;
+  }
+
+  .myGate2 .gate2Child {
+    width: 14%;
+    height: 2.1rem;
+  }
+
+  .gate2Child {
+    margin-top: -1rem;
+  }
+
+  /* .number-column div {
+    height: 20px;
+  } */
+
+  /* .clothesRoom2 {
+    margin-left:; */
+}
+
+/* iPad Pro 12.9" / Air landscape,
+  and general tablet landscape */
+@media only screen and (max-width: 1180px) {
+  :root {
+    --layout-scale: 0.72;
+  }
+
+  body {
+    padding: 1rem 0;
+    padding-left: 43px;
+    overflow-y: auto;
+  }
+
+  .allElement {
+    column-gap: 5rem;
+    grid-template-columns: repeat(6, 200px);
+  }
+
+  .mR2Element {
+    margin-left: -1.5rem;
+  }
+
+  .parentRow1 {
+    margin-left: -1.8rem;
+  }
+
+  .mR5Respone {
+    margin-left: -0.5rem;
+    margin-top: 2px;
+  }
+
+  .mR10Respone {
+    margin-left: -2.5rem;
+    margin-top: 3px;
+  }
+
+  .mR12Respone {
+    margin-left: -0.2rem;
+    /* margin-top: -0.1rem; */
+  }
+
+  .mR28Respone {
+    margin-left: 2.1rem;
+  }
+
+  .mR20Respone {
+    margin-left: -2rem;
+  }
+
+  .myR18Respone {
+    margin-left: 3.1rem;
+  }
+
+  .mR13Respone {
+    margin-left: -0.2rem;
+  }
+
+  .clothes {
+    width: 3vw;
+  }
+
+  .mR8Respone {
+    margin-left: -0.5rem;
+  }
+
+  .r4 {
+    margin-left: -2.5rem;
+  }
+
+  .mR32Respone {
+    margin-left: 2rem;
+  }
+
+  .mR30Respone {
+    margin-left: 2.5rem;
+  }
+
+  .mR21Respone {
+    margin-left: 1.2rem;
+  }
+  .gS6 {
+    margin-left: 2rem;
+  }
+
+  /* .mR6Respone {
+  } */
 
   /* .mR39 {
     margin-left: -2rem;
@@ -1266,10 +1678,15 @@ body {
     margin-top: 4rem;
   }
 
+  .clothesRoom6Element {
+    margin-top: 13.7rem;
+  }
+
   .clothesRoom6 {
     width: 50%;
     height: 5rem;
-    margin-top: 7rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
   }
 
   .leftCarExpo {
@@ -1290,7 +1707,7 @@ body {
   .plan-container {
     width: 200px;
     height: 90px;
-    margin-left: -20rem;
+    margin-left: -19.6rem;
   }
 
   .room {
@@ -1351,8 +1768,8 @@ body {
   .userCompanyLogo {
     position: absolute;
     right: 0;
-    margin-top: 3rem;
-    margin-right: 50rem;
+    margin-top: 5rem;
+    margin-right: 54rem;
   }
 
   .sponsor {
@@ -1365,15 +1782,16 @@ body {
 
   .mS1 {
     margin-left: -3rem;
-    margin-top: -0.02rem;
+    margin-top: -0.05px;
   }
 
   .allSor1 {
-    margin-left: -5.4rem;
+    margin-left: -5rem;
   }
 
   .rFGreen {
-    margin-top: -0.05rem;
+    margin-top: -2.8px;
+    margin-left: -0.4rem;
   }
 
   .myTenRElement {
@@ -1404,6 +1822,10 @@ body {
     margin-top: -1rem;
   }
 
+  /* .clothesRoom2 {
+    margin-left:;
+  } */
+
   /* .logo-grid {
     display: flex;
     flex-direction: row;
@@ -1426,6 +1848,10 @@ body {
 @media only screen and (max-width: 1024px) {
   :root {
     --layout-scale: 0.62;
+  }
+
+  body {
+    /* background-color: red; */
   }
 }
 
