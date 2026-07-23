@@ -1244,6 +1244,10 @@ body {
     margin-left: 2rem;
   }
 
+  .mR23Respone {
+    margin-left: -15rem;
+  }
+
   /* .mR6Respone {
   } */
 
@@ -1255,12 +1259,12 @@ body {
     margin-right: -5rem; */
 
   .device-container {
-    width: 75%;
+    width: 60%;
     margin-left: -1.5rem;
   }
 
   .device-body {
-    width: 200px;
+    width: 190px;
   }
 
   /* .element2 {
@@ -1272,12 +1276,12 @@ body {
   } */
 
   .device-base {
-    width: 220px;
+    width: 210px;
   }
 
   .number-row div {
-    width: 25px;
-    height: 20px;
+    width: 32px;
+    height: 23px;
   }
 
   .column3 {
@@ -1289,8 +1293,8 @@ body {
   .row2 div,
   .row3 div,
   .row4 div {
-    width: 25px;
-    height: 20px;
+    width: 32px;
+    height: 23px;
   }
 
   .subParent1 {
@@ -1313,14 +1317,14 @@ body {
   }
 
   .number-row > div {
-    width: 25px;
-    height: 20px;
+    width: 32px;
+    height: 23px;
   }
 
   .number-row2 > div,
   .number-row3 > div {
-    width: 25px;
-    height: 20px;
+    width: 32px;
+    height: 23px;
   }
   .sponsor {
     margin-left: -10rem;
@@ -1692,7 +1696,7 @@ body {
   .clothesRoom6 {
     width: 50%;
     height: 5rem;
-    margin-left: -3rem;
+    margin-left: 2.4rem;
     margin-top: 2rem;
   }
 
