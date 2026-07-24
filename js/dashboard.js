@@ -472,8 +472,6 @@ function setupNavigation() {
         if (page === 'dashboard') {
             mainCol.innerHTML = dashboardHTML;
             renderActiveUI(latestSnapshotItems);
-        } else if (page === 'analytics') {
-            renderAnalyticsUI(latestSnapshotItems);
         } else if (staticViews[page]) {
             mainCol.innerHTML = staticViews[page];
         }
