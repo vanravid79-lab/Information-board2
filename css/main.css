@@ -1158,6 +1158,42 @@ body {
   margin-left: -0.4rem;
 }
 
+.myRows47Respone {
+  margin-left: -0.7rem;
+  margin-top: -0.1rem;
+}
+
+.myRows49Respone {
+  margin-left: 2rem;
+}
+
+.myRows36Respone {
+  margin-left: -0.9rem;
+}
+
+.myRow34Respone {
+  margin-left: -1rem;
+}
+
+.r51 {
+  margin-left: -0.8rem;
+}
+
+.r50 {
+  margin-left: -0.9rem;
+}
+
+.mR39Respone,
+.mR38Respone {
+  margin-left: -1rem;
+}
+
+.mR44Respones {
+  position: absolute;
+  bottom: 0;
+  right: -1.2rem;
+}
+
 /* @media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
   body {
     background-color: orange;
@@ -1168,53 +1204,136 @@ body {
 @media only screen and (min-width: 1194px) and (max-width: 1194px) and (orientation: landscape) {
   body {
     padding: 1rem 0;
-    padding-left: 43px;
+    /* padding-left: 43px; */
     overflow-y: auto;
-    background-color: rgb(152, 237, 172);
+    background-color: #d2e5ee;
   }
 
   .allElement {
     column-gap: 5rem;
-    grid-template-columns: repeat(6, 190px);
+    grid-template-columns: repeat(6, 1fr);
+    margin-left: -2.1rem;
   }
 
   .mR2Element {
-    margin-left: 0.3rem;
+    margin-left: -6rem;
   }
 
+  /* V booths */
+  .mR40Respone {
+    margin-left: 12.7rem;
+  }
+
+  .myR3Respone {
+    margin-left: -2.5rem;
+    margin-top: 2px;
+  }
+
+  .mR38Respone {
+    margin-left: 8.5rem;
+  }
+
+  .mR39Respone {
+    margin-left: 7.9rem;
+  }
+
+  .myRSix1Respone {
+    margin-left: -2.5rem;
+  }
+
+  .mR44Respones {
+    right: -3.3rem;
+  }
+
+  .myRows47Respone {
+    margin-left: 14rem;
+    margin-top: 3rem;
+  }
+
+  #row49Container {
+    margin-left: 1.3rem;
+  }
+
+  .myRow34Respone {
+    margin-left: 8.4rem;
+    margin-top: 0.3rem;
+  }
+
+  .r51 {
+    margin-left: 15.5rem;
+  }
+
+  .r50 {
+    margin-left: 16rem;
+  }
+
+  #row9Container {
+    margin-left: -8rem;
+  }
+
+  #row25Container {
+    margin-left: 1.4rem;
+  }
+
+  /* #row14Container {
+    margin-left: -5rem;
+  } */
+
+  /* .numberRowStyle4 {
+    margin-right: 1.5rem;
+  } */
+
   .parentRow1 {
-    margin-left: -1.8rem;
+    margin-left: -4rem;
   }
 
   .mR5Respone {
-    margin-left: -0.5rem;
+    margin-left: -0.7rem;
     margin-top: 2px;
   }
 
   .mR10Respone {
-    margin-left: -2.5rem;
+    margin-left: -9.2rem;
     margin-top: 3px;
   }
 
+  #row1Container {
+    margin-top: 2px;
+  }
+
   .mR12Respone {
-    margin-left: -0.2rem;
+    margin-left: -7rem;
+
     /* margin-top: -0.1rem; */
   }
 
+  .myR11Respones {
+    margin-left: -6.8rem;
+  }
+
   .mR28Respone {
-    margin-left: 2.1rem;
+    margin-left: 11.3rem;
   }
 
   .mR20Respone {
-    margin-left: -2rem;
+    margin-left: -0.7rem;
+  }
+
+  .mR23Respone {
+    margin-left: 1rem;
+    margin-top: 2.3rem;
   }
 
   .myR18Respone {
-    margin-left: 3.1rem;
+    margin-left: 4.5rem;
   }
 
   .mR13Respone {
-    margin-left: -0.2rem;
+    margin-left: -7rem;
+  }
+
+  .myR15Respone {
+    margin-top: -2rem;
   }
 
   .clothes {
@@ -1222,7 +1341,12 @@ body {
   }
 
   .mR8Respone {
-    margin-left: -0.5rem;
+    margin-left: -12px;
+  }
+
+  /* C Booths */
+  .mR9Respone {
+    margin-left: -2.8rem;
   }
 
   .r4 {
@@ -1230,22 +1354,27 @@ body {
   }
 
   .mR32Respone {
-    margin-left: 2rem;
+    margin-left: 11.2rem;
   }
 
   .mR30Respone {
-    margin-left: 2.5rem;
+    margin-left: 11.8rem;
   }
 
   .mR21Respone {
-    margin-left: 1.2rem;
+    margin-left: 4.5rem;
   }
   .gS6 {
     margin-left: 2rem;
   }
 
-  .mR23Respone {
-    margin-left: -15rem;
+  .myRows49Respone {
+    margin-left: 14rem;
+  }
+
+  .myRows36Respone {
+    margin-left: 8rem;
+    margin-top: 0.3rem;
   }
 
   /* .mR6Respone {
@@ -1259,12 +1388,12 @@ body {
     margin-right: -5rem; */
 
   .device-container {
-    width: 60%;
+    width: 75%;
     margin-left: -1.5rem;
   }
 
   .device-body {
-    width: 190px;
+    width: 200px;
   }
 
   /* .element2 {
@@ -1276,7 +1405,7 @@ body {
   } */
 
   .device-base {
-    width: 210px;
+    width: 220px;
   }
 
   .number-row div {
@@ -1285,7 +1414,7 @@ body {
   }
 
   .column3 {
-    column-gap: 35px;
+    column-gap: 14px;
     row-gap: 27px;
   }
 
@@ -1316,11 +1445,6 @@ body {
     height: 23px;
   }
 
-  .number-row > div {
-    width: 32px;
-    height: 23px;
-  }
-
   .number-row2 > div,
   .number-row3 > div {
     width: 32px;
@@ -1330,7 +1454,7 @@ body {
     margin-left: -10rem;
   }
   .sponsor2 {
-    margin-left: -12rem;
+    margin-left: -20rem;
   }
 
   /* .AllReRows {
@@ -1363,7 +1487,7 @@ body {
   .clothesRoom6 {
     width: 50%;
     height: 5rem;
-    margin-left: -3rem;
+    margin-left: 2.4rem;
     margin-top: 2rem;
   }
 
@@ -1385,14 +1509,14 @@ body {
   .plan-container {
     width: 200px;
     height: 90px;
-    margin-left: -19.6rem;
+    margin-left: -7rem;
   }
 
   .room {
-    width: 193px;
+    width: 195px;
     height: 117px;
     margin-top: -7.3rem;
-    margin-left: -15.5rem;
+    margin-left: -2.9rem;
   }
 
   #row10Container {
@@ -1417,14 +1541,14 @@ body {
   }
 
   .threeSwRos {
-    margin-left: -16.5rem;
+    margin-left: -1.4rem;
   }
 
   .reg-fp-container {
     width: 130px;
     height: 45px;
-    margin-top: 2rem;
-    margin-left: 20rem;
+    margin-top: -1.5rem;
+    margin-left: 4rem;
     padding: 2px;
   }
 
@@ -1439,45 +1563,52 @@ body {
     margin-top: 0.7rem;
   }
 
-  .r51 {
-    margin-top: 0.7rem;
+  .r51,
+  .r50 {
+    margin-top: 0.2rem;
   }
 
   .userCompanyLogo {
     position: absolute;
     right: 0;
-    margin-top: 17rem;
-    margin-right: 54rem;
+    margin-top: -8rem;
+    margin-right: 56rem;
   }
 
   .sponsor {
-    margin-top: -0.2rem;
+    margin-top: -0.4rem;
+    margin-left: -13rem;
   }
 
   .mR1 {
-    margin-left: -1.5rem;
+    margin-left: -6rem;
   }
 
   .mS1 {
-    margin-left: -3rem;
-    margin-top: -0.05px;
+    margin-left: -10rem;
+    margin-top: -3.5px;
   }
 
   .allSor1 {
-    margin-left: -5rem;
+    margin-left: -8rem;
+    margin-top: -4px;
   }
 
   .rFGreen {
-    margin-top: -2.8px;
+    margin-top: -10px;
     margin-left: -0.4rem;
   }
 
   .myTenRElement {
-    margin-left: 2.2rem;
+    margin-left: 11.3rem;
+  }
+
+  .myRow16Respone {
+    margin-left: 1.4rem;
   }
 
   .mR17Respone {
-    margin-left: -2rem;
+    margin-left: -0.7rem;
   }
 
   .rowElement44 {
@@ -1489,15 +1620,33 @@ body {
     height: 1.5rem;
     margin-left: -17rem;
     margin-top: -6.5rem;
+    display: none;
   }
 
   .myGate2 .gate2Child {
     width: 14%;
     height: 2.1rem;
+    display: none;
   }
 
   .gate2Child {
     margin-top: -1rem;
+  }
+
+  .layout-container {
+    margin-left: -5rem;
+  }
+
+  /* none element */
+  .sixBooths,
+  .device-body,
+  .device-base,
+  .room-layout,
+  .size-label,
+  .leftCarExpo,
+  .clothesRoom,
+  .clothesRoom6 {
+    display: none;
   }
 }
 
