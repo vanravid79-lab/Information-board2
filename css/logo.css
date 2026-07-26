@@ -1,17 +1,39 @@
 /* ==========================================================
-   1. DESIGN TOKENS & SYSTEM VARIABLES
+   1. DESIGN TOKENS
    ========================================================== */
 :root {
+  /* Layout */
   --grid-width: 320px; /* Desktop default width */
   --grid-height: 510px; /* Scroll container height */
   --min-card-width: 110px; /* Flexible grid column base */
 
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 10px;
+  --space-md: 12px;
+  --space-lg: 16px;
+
+  /* Color */
   --color-border: #e0e0e0;
   --color-card-bg: #ffffff;
   --color-active-bg: #f0f7ff;
   --color-active-border: #007bff;
   --color-pin: #ff3b30;
   --color-shadow: rgba(0, 0, 0, 0.05);
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #666666;
+
+  /* Typography */
+  --font-size-title: 16px;
+  --font-size-subtitle: 13px;
+  --font-size-name: 14px;
+
+  /* Motion */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+
+  /* Radius */
+  --radius-card: 8px;
 }
 
 /* ==========================================================
@@ -20,96 +42,95 @@
 .logo-grid {
   display: grid;
   grid-template-columns: repeat(var(--grid-columns), 1fr);
-  gap: 16px;
-  padding: 16px 12px;
+  gap: var(--space-lg);
+  padding: var(--space-lg) var(--space-md);
 
   width: var(--grid-width);
   max-width: 100%;
   height: var(--grid-height);
   max-height: var(--grid-height);
 
-  overflow-y: auto; /* required — this is what makes it scrollable */
-  overflow-x: hidden;
-  scroll-behavior: smooth;
   box-sizing: border-box;
   margin: 0 auto;
 
-  /* Hide the scrollbar completely, but keep scrolling functional */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* old Edge / IE */
+  overflow-x: hidden;
+  overflow-y: auto; /* required for scrolling */
+  scroll-behavior: smooth;
 
-  /* mask stays the same */
+  /* Hide native scrollbar while keeping scroll functionality */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* legacy Edge / IE */
+
+  /* Fade top/bottom edges of the scroll area */
   -webkit-mask-clip: padding-box;
   mask-clip: padding-box;
   -webkit-mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 6%,
-    rgba(0, 0, 0, 1) 94%,
-    rgba(0, 0, 0, 0) 0%
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
   );
   mask-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 1) 6%,
-    rgba(0, 0, 0, 1) 94%,
-    rgba(0, 0, 0, 0) 0%
+    transparent 0%,
+    black 6%,
+    black 94%,
+    transparent 100%
   );
 }
 
-/* Hide scrollbar completely in WebKit browsers (Chrome, Safari, Edge) */
 .logo-grid::-webkit-scrollbar {
-  display: none;
+  display: none; /* Chrome, Safari, modern Edge */
 }
 
-/* .logo-grid::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
+.logo-grid-title {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  text-align: center;
 }
-.logo-grid::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.4);
-} */
+
+.logo-grid-subtitle {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-subtitle);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  text-align: center;
+}
 
 /* ==========================================================
-   3. COMPANY CARD & LOGO STYLING
+   3. COMPANY CARD & LOGO
    ========================================================== */
 .company-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 30px var(--space-xs);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 30px 8px;
+  border-radius: var(--radius-card);
   background-color: var(--color-card-bg);
   box-shadow: 0 4px 6px var(--color-shadow);
   transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease;
+    transform var(--transition-fast),
+    background-color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.company-card.active-selected-card {
+  background-color: var(--color-active-bg);
+  border-color: transparent;
+  outline: 2px solid var(--color-active-border);
+  transform: scale(1.02);
 }
 
 .companyLogo {
-  width: 100%;
   display: flex;
-  justify-content: center;
+  width: 100%;
   align-items: center;
-}
-
-.logo-grid-title {
-  font-size: 16px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0 0 12px 0;
-  color: #1a1a1a;
-}
-
-.logo-grid-subtitle {
-  font-size: 13px;
-  color: #666;
-  text-align: center;
-  margin: 0 0 12px 0;
-  line-height: 1.4;
+  justify-content: center;
 }
 
 .companyLogo img {
@@ -121,18 +142,11 @@
 }
 
 .company-name {
+  margin-top: var(--space-xs);
+  font-size: var(--font-size-name);
   font-weight: 600;
-  font-size: 14px;
-  margin-top: 8px;
-  text-align: center;
   line-height: 1.2;
-}
-
-.company-card.active-selected-card {
-  background-color: var(--color-active-bg);
-  outline: 2px solid var(--color-active-border);
-  border-color: transparent;
-  transform: scale(1.02);
+  text-align: center;
 }
 
 /* ==========================================================
@@ -142,27 +156,27 @@
   position: relative;
   overflow: visible;
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.2s ease;
+    background-color var(--transition-medium),
+    color var(--transition-medium),
+    transform var(--transition-fast);
 }
 
 .booth-cell.highlighted {
-  transform: scale(1.05);
+  z-index: 5;
   color: #ffffff;
   font-weight: bold;
-  z-index: 5;
+  transform: scale(1.05);
 }
 
 .booth-pin {
   position: absolute;
   top: -24px;
   left: 50%;
+  z-index: 99;
   translate: -50% 0;
   font-size: 24px;
   color: var(--color-pin);
   pointer-events: none;
-  z-index: 99;
   animation: floatPin 1.5s ease-in-out infinite;
 }
 
@@ -176,6 +190,11 @@
   }
 }
 
+/* ==========================================================
+   5. RESPONSIVE BREAKPOINTS
+   ========================================================== */
+
+/* --- Mobile (≤ 743px) --- */
 @media only screen and (max-width: 743px) {
   :root {
     --grid-width: 100%;
@@ -183,15 +202,15 @@
   }
 
   .logo-grid {
-    grid-template-columns: 1fr; /* one column = each card becomes its own row */
-    gap: 10px;
-    padding: 10px 12px;
+    grid-template-columns: 1fr; /* one card per row */
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
   }
 
   .company-card {
     flex-direction: row; /* logo + name side by side */
     justify-content: flex-start;
-    padding: 10px 12px;
+    padding: var(--space-sm) var(--space-md);
   }
 
   .companyLogo {
@@ -205,17 +224,13 @@
 
   .company-name {
     margin-top: 0;
-    margin-left: 12px;
+    margin-left: var(--space-md);
     text-align: left;
     font-size: 14px;
   }
 }
 
-/* ==========================================================
-   6. IPAD & TABLET RESPONSIVE BREAKPOINTS
-   ========================================================== */
-
-/* --- IPAD MINI SPECIFIC BREAKPOINT (744px - 768px Width) --- */
+/* --- iPad Mini (744px – 768px) --- */
 @media only screen and (min-width: 744px) and (max-width: 768px) {
   :root {
     --grid-width: 100%;
@@ -224,8 +239,8 @@
   }
 
   .logo-grid {
-    padding: 10px 6px;
-    gap: 10px;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 6px;
   }
 
   .company-card {
@@ -241,7 +256,7 @@
   }
 }
 
-/* --- IPAD AIR & IPAD PRO PORTRAIT (769px - 834px) --- */
+/* --- iPad Air & Pro, portrait (769px – 834px) --- */
 @media only screen and (min-width: 769px) and (max-width: 834px) and (orientation: portrait) {
   :root {
     --grid-width: 100%;
@@ -250,12 +265,12 @@
   }
 
   .logo-grid {
-    padding: 12px 8px;
-    gap: 12px;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-xs);
   }
 
   .company-card {
-    padding: 8px 6px;
+    padding: var(--space-xs) 6px;
   }
 
   .company-name {
@@ -263,7 +278,7 @@
   }
 }
 
-/* --- IPAD MINI, AIR, PRO LANDSCAPE (835px - 1194px) --- */
+/* --- iPad Mini/Air/Pro, landscape (835px – 1194px) --- */
 @media only screen and (min-width: 835px) and (max-width: 1194px) and (orientation: landscape) {
   :root {
     --grid-width: 260px;
@@ -272,7 +287,7 @@
   }
 
   .logo-grid {
-    padding: 12px 8px;
-    gap: 12px;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-xs);
   }
 }
