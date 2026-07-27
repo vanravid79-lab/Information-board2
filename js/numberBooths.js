@@ -86,6 +86,7 @@ export async function seedBoothsCollection() {
         });
 
         const newBoothsSet = new Set();
+
         const batch = writeBatch(db);
 
         // Process ADD & UPDATE
