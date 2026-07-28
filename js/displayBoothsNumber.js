@@ -5,8 +5,8 @@ export async function renderBooths() {
         const boothsRef = collection(db, "boothsNumber");
         const querySnapshot = await getDocs(boothsRef);
 
-        // 1. Dynamically clear all row containers (row1Container through row40Container)
-        // Prevents duplicate booth elements if function is called multiple times
+        // 1. Dynamically clear all existing row containers present on the current DOM
+        // Loop 1..57 safely without touching or logging non-existent rows
         for (let i = 1; i <= 57; i++) {
             const container = document.getElementById(`row${i}Container`);
             if (container) {
@@ -20,10 +20,22 @@ export async function renderBooths() {
             ...doc.data()
         }));
 
+        let renderedCount = 0;
+        let skippedCount = 0;
+
         // 3. Render each booth into its target row container
         booths.forEach((boot) => {
             // Guard clause: skip if required data is missing
             if (!boot.bootNumber || !boot.row) return;
+
+            // Check if the container exists FIRST before creating elements
+            const targetContainer = document.getElementById(`${boot.row}Container`);
+
+            // Silent guard: If this row doesn't exist on this layout/page, skip it cleanly
+            if (!targetContainer) {
+                skippedCount++;
+                return;
+            }
 
             const boothElement = document.createElement("div");
 
@@ -36,20 +48,15 @@ export async function renderBooths() {
             boothElement.dataset.booth = cleanBoothNumber;
             boothElement.dataset.status = boothStatus;
 
-            // Base CSS classes + dynamic status class (e.g., status-available, status-booking, status-confirm)
+            // Base CSS classes + dynamic status class
             boothElement.classList.add("booth-cell", `status-${boothStatus}`);
 
-            // Dynamic row target lookup (e.g., "row1" -> "row1Container")
-            const targetContainer = document.getElementById(`${boot.row}Container`);
-
-            if (targetContainer) {
-                targetContainer.appendChild(boothElement);
-            } else {
-                console.warn(`⚠️ Target container element "#${boot.row}Container" not found in DOM.`);
-            }
+            // Append directly to validated container
+            targetContainer.appendChild(boothElement);
+            renderedCount++;
         });
 
-        console.log("✅ Booths rendered successfully with status classes!");
+        console.log(`✅ Rendered ${renderedCount} booths successfully! (${skippedCount} booths mapped to rows not present in this DOM layout)`);
     } catch (error) {
         console.error("❌ Error rendering booths:", error);
     }

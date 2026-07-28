@@ -1,15 +1,13 @@
-// js/displayComLogo.js
-
 import { db, collection, query, orderBy, onSnapshot } from "../firebase/firebase.js";
 
 // --- GLOBAL TRACKING STATE ---
 let activeSelectedCompanyId = null;
+let previousCardCount = 0;
 
 // ---------------------------------------------------
 // STEP 1: Auto-tag booth cells (Normalized to UPPERCASE)
 // ---------------------------------------------------
 function tagBoothCells() {
-    // Matches booth-style text: A1, J1, U12, C9, 171, 96, etc.
     const boothPattern = /^[A-Za-z]{0,3}\d+$/;
 
     const scope = document.querySelectorAll(
@@ -26,7 +24,6 @@ function tagBoothCells() {
         if (!boothPattern.test(text)) return;
 
         el.classList.add("booth-cell");
-        // Always store as UPPERCASE for consistent query matching
         el.dataset.booth = text.toUpperCase();
         count++;
     });
@@ -35,11 +32,14 @@ function tagBoothCells() {
 }
 
 // ---------------------------------------------------
-// STEP 2: Listen to booth/company cards in REAL-TIME from Firestore
+// STEP 2: Real-time listener for Firestore company booths
 // ---------------------------------------------------
 function listenToBooths() {
     const container = document.getElementById("boothContainer");
-    if (!container) return;
+    if (!container) {
+        console.warn("⚠️ Element #boothContainer not found in DOM.");
+        return;
+    }
 
     console.log("Listening to booths in real-time from Firestore...");
 
@@ -47,12 +47,16 @@ function listenToBooths() {
     const q = query(boothsCollection, orderBy("companyId", "asc"));
 
     onSnapshot(q, (snapshot) => {
+        const currentScrollLeft = container.scrollLeft;
+        const currentCardCount = snapshot.size;
+
         container.innerHTML = "";
 
         if (snapshot.empty) {
-            container.innerHTML = "<p>No booths found.</p>";
+            container.innerHTML = "<p style='padding:1rem; width:100%; text-align:center;'>No booths found.</p>";
             activeSelectedCompanyId = null;
             resetAllHighlights();
+            previousCardCount = 0;
             return;
         }
 
@@ -77,9 +81,9 @@ function listenToBooths() {
 
             card.innerHTML = `
                 <div class="companyLogo">
-                    <img src="${data.asset || ''}" alt="${data.companyName || 'Brand'} Logo" />
+                    <img src="${data.asset || ''}" alt="${data.companyName || 'Brand'} Logo" loading="lazy" />
                 </div>
-                <div class="company-name">${data.companyName || 'Unnamed'}</div>
+                <div class="company-name" title="${data.companyName || ''}">${data.companyName || 'Unnamed'}</div>
             `;
 
             card.addEventListener("click", () => {
@@ -100,7 +104,6 @@ function listenToBooths() {
             container.appendChild(card);
         });
 
-        // Re-highlight if active company updated or deleted in real-time
         if (activeSelectedCompanyId !== null) {
             if (currentlyActiveCompanyData) {
                 highlightBooths(currentlyActiveCompanyData);
@@ -110,14 +113,27 @@ function listenToBooths() {
             }
         }
 
+        // Keep scroll position smooth on real-time sync
+        if (previousCardCount > 0 && currentCardCount > previousCardCount) {
+            container.scrollTo({
+                left: container.scrollWidth,
+                behavior: "smooth"
+            });
+        } else {
+            container.scrollLeft = currentScrollLeft;
+        }
+
+        previousCardCount = currentCardCount;
         console.log("⚡ Real-time display sync completed!");
     }, (error) => {
         console.error("❌ Error syncing real-time board data:", error);
-        container.innerHTML = `<p style="color: red;">Error updating board data: ${error.message}</p>`;
+        container.innerHTML = `<p style="color: red; padding:1rem;">Error updating board data: ${error.message}</p>`;
     });
 }
 
-// Helper function to wipe styles cleanly
+// ---------------------------------------------------
+// STEP 3: Clear all highlights cleanly
+// ---------------------------------------------------
 function resetAllHighlights() {
     const allCells = document.querySelectorAll(".booth-cell");
     allCells.forEach(cell => {
@@ -133,7 +149,7 @@ function resetAllHighlights() {
 }
 
 // ---------------------------------------------------
-// STEP 3: Case-Insensitive Matching for Highlighting
+// STEP 4: Case-insensitive booth highlighter
 // ---------------------------------------------------
 function highlightBooths(data) {
     resetAllHighlights();
@@ -157,7 +173,6 @@ function highlightBooths(data) {
                 cell.style.backgroundColor = data.statusColor || "#007bff";
                 cell.classList.add("highlighted");
 
-                // Avoid adding duplicate pins if clicked repeatedly
                 if (!cell.querySelector(".booth-pin")) {
                     const pin = document.createElement("i");
                     pin.className = "fa-solid fa-location-dot booth-pin";
@@ -179,9 +194,62 @@ function highlightBooths(data) {
 }
 
 // ---------------------------------------------------
-// STEP 4: Run everything on page load
+// STEP 5: Desktop Drag-to-Scroll Mechanism
+// ---------------------------------------------------
+function enableDragToScroll() {
+    const container = document.getElementById("boothContainer");
+    if (!container) return;
+
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let isDragging = false;
+
+    container.addEventListener("mousedown", (e) => {
+        isDown = true;
+        isDragging = false;
+        container.style.cursor = "grabbing";
+        container.style.scrollBehavior = "auto";
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    const endDrag = () => {
+        isDown = false;
+        container.style.cursor = "grab";
+        container.style.scrollBehavior = "smooth";
+    };
+
+    container.addEventListener("mouseleave", endDrag);
+    container.addEventListener("mouseup", endDrag);
+
+    container.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 1.5;
+
+        if (Math.abs(x - startX) > 5) {
+            isDragging = true;
+            e.preventDefault();
+            container.scrollLeft = scrollLeft - walk;
+        }
+    });
+
+    container.addEventListener("click", (e) => {
+        if (isDragging) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            isDragging = false;
+        }
+    }, true);
+}
+
+// ---------------------------------------------------
+// STEP 6: Run on DOM ready
 // ---------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
     tagBoothCells();
     listenToBooths();
+    enableDragToScroll();
 });
