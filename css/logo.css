@@ -320,3 +320,34 @@
     padding: var(--space-md) var(--space-lg);
   }
 }
+
+/* --- Laptop & Desktop (≥ 1195px) --- */
+@media only screen and (min-width: 1195px) {
+  :root {
+    --grid-height: 200px;
+    --min-card-width: 190px;
+  }
+
+  body {
+    overflow-y: visible;
+  }
+
+  .logo-grid {
+    gap: var(--space-lg);
+    padding: var(--space-lg) var(--space-lg);
+    margin-top: 12rem;
+    margin-left: -22rem;
+  }
+
+  .companyLogo {
+    height: 52px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
+  .exhibitingText {
+    top: 4rem;
+  }
+}

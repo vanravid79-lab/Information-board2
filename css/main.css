@@ -44,7 +44,7 @@ body {
   column-gap: 5rem;
   width: 100%;
   margin-top: 2rem;
-  margin-left: 5rem;
+  margin-left: 6rem;
 }
 
 /* --- SECTION 1: DEVICE ELEMENT --- */
@@ -528,7 +528,7 @@ body {
 
 .threeSwRos {
   margin-top: 3rem;
-  margin-left: -21.5rem;
+  margin-left: -20.8rem;
 }
 
 .sixBooths {
@@ -642,7 +642,7 @@ body {
   align-items: center;
   box-sizing: border-box;
   padding: 10px;
-  margin-left: -18.7rem;
+  margin-left: -18rem;
   margin-top: -7.7rem;
   /* Reduced slightly to give items more room */
 }
@@ -962,6 +962,7 @@ body {
   padding: 8px 15px 2px 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  margin-left: 8rem;
 }
 
 /* Stations Wrapper */
@@ -1036,6 +1037,7 @@ body {
   background-color: rgb(113, 111, 111);
   width: 4.7rem;
   height: 2rem;
+  display: none;
 }
 
 .allCarExpo1 {
@@ -1104,7 +1106,7 @@ body {
 }
 
 .myTenRElement {
-  margin-left: -0.8rem;
+  margin-left: -0.3rem;
 }
 
 .cRow {
@@ -1124,6 +1126,7 @@ body {
   background-color: rgb(113, 111, 111);
   width: 4.7rem;
   height: 2rem;
+  display: none;
 }
 
 .mR28Respone {
@@ -1138,24 +1141,20 @@ body {
   margin-top: 13rem;
 }
 
-.clothesRoom6 {
-  margin-left: -4rem;
-}
-
 .mR32Respone {
-  margin-left: -0.9rem;
+  margin-left: -0.4rem;
 }
 
 .mR30Respone {
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 
 .mR21Respone {
-  margin-left: -0.4rem;
+  margin-left: -0.2rem;
 }
 
 .mR23Respone {
-  margin-left: -0.4rem;
+  margin-left: -0.2rem;
 }
 
 .myRows47Respone {
@@ -1167,31 +1166,48 @@ body {
   margin-left: 2rem;
 }
 
+.mR20Respone {
+  margin-left: 0.2px;
+}
+
 .myRows36Respone {
-  margin-left: -0.9rem;
+  margin-left: -0.4rem;
 }
 
 .myRow34Respone {
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 
-.r51 {
-  margin-left: -0.8rem;
-}
-
+.r51,
 .r50 {
-  margin-left: -0.9rem;
+  margin-left: 0.2rem;
 }
 
 .mR39Respone,
 .mR38Respone {
-  margin-left: -1rem;
+  margin-left: -0.5rem;
 }
 
 .mR44Respones {
   position: absolute;
   bottom: 0;
   right: -1.2rem;
+}
+
+.myRow16Respone {
+  margin-left: 0.3rem;
+}
+
+.myR18Respone {
+  margin-left: -2px;
+}
+
+.mR28Respone {
+  margin-left: -0.3rem;
+}
+
+.myRows47Respone {
+  margin-left: 0.2rem;
 }
 
 /* @media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
