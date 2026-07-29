@@ -44,7 +44,7 @@ body {
   column-gap: 5rem;
   width: 100%;
   margin-top: 2rem;
-  margin-left: 6rem;
+  margin-left: 5.5rem;
 }
 
 /* --- SECTION 1: DEVICE ELEMENT --- */
@@ -1210,6 +1210,101 @@ body {
   margin-left: 0.2rem;
 }
 
+.pin-wrap {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 25rem;
+  margin-top: -43rem;
+}
+
+.label {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  letter-spacing: 0.02em;
+  animation: labelfloat 2.4s ease-in-out infinite;
+}
+
+.pulse {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #185fa5;
+  animation: pulse 2.4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.pin {
+  position: relative;
+  font-size: 4rem;
+  color: #ee6565;
+  animation: float 2.4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.shadow {
+  position: absolute;
+  bottom: -8px;
+  width: 22px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  opacity: 0.25;
+  animation: shadow 2.4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes labelfloat {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, -8px);
+  }
+}
+
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.15;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.35;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
 /* @media screen and (min-width: 1194px) and (max-width: 1366px) and (orientation: landscape) {
   body {
     background-color: orange;
@@ -1235,6 +1330,15 @@ body {
   /* V booths */
   .mR40Respone {
     margin-left: 12.7rem;
+  }
+
+  .pin-wrap {
+    margin-top: -20rem;
+    margin-left: 5rem;
+  }
+
+  .label {
+    font-size: 1rem;
   }
 
   .myR3Respone {
