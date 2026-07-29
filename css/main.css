@@ -1204,8 +1204,6 @@ body {
 @media only screen and (min-width: 1194px) and (max-width: 1194px) and (orientation: landscape) {
   body {
     padding: 1rem 0;
-    /* padding-left: 43px; */
-    overflow-y: auto;
   }
 
   .allElement {
@@ -1546,9 +1544,10 @@ body {
   .reg-fp-container {
     width: 130px;
     height: 45px;
-    margin-top: -1.5rem;
+    margin-top: -5rem;
     margin-left: 4rem;
     padding: 2px;
+    display: none;
   }
 
   .reg-fp-station-wrapper {
@@ -1658,8 +1657,28 @@ body {
 
   body {
     padding: 1rem 0;
-    padding-left: 43px;
     overflow-y: auto;
+    padding-left: -0.5rem;
+  }
+
+  /* none element */
+  .sixBooths,
+  .device-body,
+  .device-base,
+  .room-layout,
+  .size-label,
+  .leftCarExpo,
+  .clothesRoom,
+  .clothesRoom6 {
+    display: none;
+  }
+
+  .myR3Respone {
+    margin-left: -19rem;
+  }
+
+  .myRSix1Respone {
+    margin-left: -16.5rem;
   }
 
   .allElement {
@@ -1668,7 +1687,7 @@ body {
   }
 
   .mR2Element {
-    margin-left: -1.5rem;
+    margin-left: -22rem;
   }
 
   .parentRow1 {
@@ -1676,17 +1695,16 @@ body {
   }
 
   .mR5Respone {
-    margin-left: -0.5rem;
-    margin-top: 2px;
+    margin-left: -0.1rem;
   }
 
   .mR10Respone {
-    margin-left: -2.5rem;
+    margin-left: -14rem;
     margin-top: 3px;
   }
 
   .mR12Respone {
-    margin-left: -0.2rem;
+    margin-left: -9rem;
     /* margin-top: -0.1rem; */
   }
 
@@ -1699,11 +1717,11 @@ body {
   }
 
   .myR18Respone {
-    margin-left: 3.1rem;
+    margin-left: -3.1rem;
   }
 
   .mR13Respone {
-    margin-left: -0.2rem;
+    margin-left: -9rem;
   }
 
   .clothes {
@@ -1711,7 +1729,7 @@ body {
   }
 
   .mR8Respone {
-    margin-left: -0.5rem;
+    margin-left: -0.1rem;
   }
 
   .r4 {
@@ -1733,18 +1751,8 @@ body {
     margin-left: 2rem;
   }
 
-  /* .mR6Respone {
-  } */
-
-  /* .mR39 {
-    margin-left: -2rem;
-  } */
-
-  /* .mR34 {
-    margin-right: -5rem; */
-
   .device-container {
-    width: 75%;
+    width: 90%;
     margin-left: -1.5rem;
   }
 
@@ -1752,21 +1760,23 @@ body {
     width: 200px;
   }
 
-  /* .element2 {
-    background-color: rgb(160, 158, 158);
-  }
-
-  .element3 {
-    background-color: rgb(160, 158, 158);
-  } */
-
   .device-base {
     width: 220px;
   }
 
+  .number-column {
+    width: 50px;
+    height: 40vh;
+  }
+
+  .number-column div {
+    font-size: 1.2rem;
+  }
+
   .number-row div {
-    width: 32px;
-    height: 23px;
+    width: 50px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 
   .column3 {
@@ -1778,13 +1788,18 @@ body {
   .row2 div,
   .row3 div,
   .row4 div {
-    width: 32px;
-    height: 23px;
+    width: 50px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 
   .subParent1 {
-    grid-template-columns: repeat(2, 32px);
-    grid-template-rows: repeat(2, 23px);
+    grid-template-columns: repeat(2, 50px);
+    grid-template-rows: repeat(2, 35px);
+  }
+
+  .subParent1 div {
+    font-size: 1.2rem;
   }
 
   .rowElement6 {
@@ -1803,8 +1818,9 @@ body {
 
   .number-row2 > div,
   .number-row3 > div {
-    width: 32px;
-    height: 23px;
+    width: 50px;
+    height: 35px;
+    font-size: 1.2rem;
   }
   .sponsor {
     margin-left: -10rem;
@@ -1865,14 +1881,14 @@ body {
   .plan-container {
     width: 200px;
     height: 90px;
-    margin-left: -19.6rem;
+    margin-left: -5rem;
   }
 
   .room {
-    width: 193px;
-    height: 117px;
-    margin-top: -7.3rem;
-    margin-left: -15.5rem;
+    width: 190px;
+    height: 140px;
+    margin-top: -9.7rem;
+    margin-left: -5rem;
   }
 
   #row10Container {
@@ -1897,7 +1913,7 @@ body {
   }
 
   .threeSwRos {
-    margin-left: -16.5rem;
+    margin-left: -7.5rem;
   }
 
   .reg-fp-container {
@@ -1935,7 +1951,7 @@ body {
   }
 
   .mR1 {
-    margin-left: -1.5rem;
+    margin-left: -18rem;
   }
 
   .mS1 {
@@ -1953,11 +1969,23 @@ body {
   }
 
   .myTenRElement {
-    margin-left: 2.2rem;
+    margin-left: 5.3rem;
   }
 
   .mR17Respone {
-    margin-left: -2rem;
+    margin-left: -0.2rem;
+  }
+
+  .myR11Respones {
+    margin-left: -11.5rem;
+  }
+
+  .myRow16Respone {
+    margin-left: -6.1rem;
+  }
+
+  .myRSix1Respone {
+    margin-left: -19rem;
   }
 
   .rowElement44 {
@@ -1969,15 +1997,21 @@ body {
     height: 1.5rem;
     margin-left: -17rem;
     margin-top: -6.5rem;
+    display: none;
   }
 
   .myGate2 .gate2Child {
     width: 14%;
     height: 2.1rem;
+    display: none;
   }
 
   .gate2Child {
     margin-top: -1rem;
+  }
+
+  .mR44Respones {
+    right: -2.5rem;
   }
 
   /* .clothesRoom2 {

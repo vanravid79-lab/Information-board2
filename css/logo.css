@@ -36,14 +36,14 @@
   --radius-card: 8px;
 }
 
-.userCompanyLogo {
+/* .userCompanyLogo {
   width: 100%;
   max-width: 100%;
   margin: 2rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 /* ==========================================================
    2. LOGO GRID & SCROLL CONTAINER (Horizontal Row Setup)
@@ -52,7 +52,7 @@
 /* FIXED: Changed from absolute positioning to centered relative text */
 .exhibitingText {
   position: relative;
-  top: -3rem;
+  top: -11rem;
   right: auto;
   margin-bottom: var(--space-sm);
   text-align: center;
@@ -62,7 +62,7 @@
 .userCompanyLogo {
   width: 100%;
   max-width: 900px; /* Limits max width so it stays neat */
-  margin: 0 auto; /* Centers the container horizontally on the page */
+  margin: -8rem auto; /* Centers the container horizontally on the page */
   display: flex;
   flex-direction: column;
   align-items: center;

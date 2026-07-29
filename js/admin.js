@@ -24,6 +24,8 @@ const boothsCollection = collection(db, "companyBoots");
 
 // Memory state
 const selectedBooths = new Set();
+console.log("electedBooths: ", selectedBooths);
+
 let latestItems = [];
 
 // DOM References
@@ -55,11 +57,14 @@ if (companyNameInput && brandNameFeedback) {
         const val = companyNameInput.value.trim().toLowerCase();
         const editingDocId = document.getElementById('editingDocId')?.value || "";
 
+        // Empty input check
         if (!val) {
             brandNameFeedback.innerHTML = "";
             return;
         }
 
+
+        //  Checking for duplicates
         const exists = latestItems.some(({ id: docId, data }) => {
             if (editingDocId && docId === editingDocId) return false;
             return (data.companyName || "").trim().toLowerCase() === val;
@@ -86,6 +91,8 @@ if (brandFileInput) {
                 brandFileInput.value = "";
                 return;
             }
+
+            // Converting the file to base64
             const base64 = await fileToBase64(file);
             imagePreviewEl.src = base64;
             imagePreviewEl.style.display = "block";
@@ -97,6 +104,7 @@ if (brandFileInput) {
 // HELPER FUNCTIONS
 // -------------------------------------------------------------
 function fileToBase64(file) {
+
     return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onloadend = () => resolve(reader.result);
@@ -104,6 +112,7 @@ function fileToBase64(file) {
         reader.readAsDataURL(file);
     });
 }
+
 
 function escapeHtml(str) {
     const div = document.createElement('div');
@@ -164,6 +173,7 @@ function openDrawer() {
         toggleFormBtn.innerHTML = '<span class="btn-icon">✕</span> Close Form';
     }
 }
+
 
 function resetFormState() {
     if (adminForm) adminForm.reset();
